@@ -44,7 +44,7 @@ body {
 }
 
 .upload-button,
-.replace-button {
+.control-button {
   cursor: pointer;
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 999px;
@@ -52,10 +52,11 @@ body {
   color: white;
   padding: 0.8rem 1.2rem;
   backdrop-filter: blur(12px);
+  font: inherit;
 }
 
 .upload-button:hover,
-.replace-button:hover {
+.control-button:hover {
   background: rgba(255, 255, 255, 0.2);
 }
 
@@ -71,11 +72,18 @@ input[type='file'] {
   background: black;
 }
 
-.replace-button {
+.ascii-canvas {
+  image-rendering: crisp-edges;
+}
+
+.media-actions {
   position: fixed;
   top: 1rem;
   right: 1rem;
   z-index: 1;
+  display: grid;
+  gap: 0.6rem;
+  justify-items: end;
 }
 
 .error,
